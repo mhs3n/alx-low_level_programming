@@ -1,10 +1,16 @@
 /*
  * Author: mhs3n
  * Date: 2023-06-15
+ * file 6-size.c
  */
 
 #include <stdio.h>
-
+/**
+ * main - Prints the size of various types based on
+ *        the computer it is compiled and run on..
+ *
+ * Return: Always 0.
+ */
 int main() {
     printf("Size of a char: %zu byte(s)\n", sizeof(char));
 	printf("Size of an int: %zu byte(s)\n", sizeof(int));
