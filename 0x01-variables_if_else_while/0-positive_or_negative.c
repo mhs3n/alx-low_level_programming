@@ -1,13 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
-
-
 /**
  *program that sazs negative ; positif or zero
  *
- * main - entry point
+ */
+/**
+ * main - megative, positif, or zero
  * return: 0 success
  */
 int main(void)
