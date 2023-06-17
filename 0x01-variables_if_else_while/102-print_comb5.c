@@ -1,30 +1,43 @@
 #include <stdio.h>
 
 /**
- *main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
- *Return: Always 0 (Success)
+ * main - a simple program that outputs unordered
+ * combinations of two digit integers without duplicates
+ *
+ * Return: 0 on success
  */
-int main()
+int main(void)
 {
-	int i, j;
-	for (i = 0; i < 100; i++) {
-        	for (j = 0; j < 100; j++) {
-            		// Print tens digit of first number
-            		putchar('0' + i / 10);
-            		// Print ones digit of first number
-            		putchar('0' + i % 10);
-            		// Print space separator
-           		putchar(' ');
-            		// Print tens digit of second number
-            		putchar('0' + j / 10);
-            		// Print ones digit of second number
-            		putchar('0' + j % 10);
-            		// Print comma separator
-            		putchar(',');
-            		// Print space separator
-            		putchar(' ');
-        		}
-    		}	
+	int ifirst;
+	int i;
+	int jfirst;
+	int j;
 
-	return 0;
+	for (ifirst = 48; ifirst < 58; ifirst++)
+	{
+		for (i = 48; i < 58; i++)
+		{
+			j = i + 1;
+			jfirst = ifirst;
+			for (; jfirst < 58; jfirst++)
+			{
+				for (; j < 58; j++)
+				{
+					putchar(ifirst);
+					putchar(i);
+					putchar(' ');
+					putchar(jfirst);
+					putchar(j);
+					if (ifirst != 57 || jfirst != 57 || i != 56 || j != 57)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				j = 48;
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
