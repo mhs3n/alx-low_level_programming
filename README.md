@@ -1,1 +1,1 @@
-Debugging is so cool 
+i wanna learn how to make a cool README
